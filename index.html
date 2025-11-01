@@ -1,44 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GZY</title>
-    <style>
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3498db;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        audio { display: none; }
-    </style>
+	<title>GZY</title>
 </head>
 <body>
-    <div id="loading" style="text-align: center; margin-top: 50px;">
-        <div class="loader"></div>
-        <p>音频加载中...</p>
-    </div>
-
-    
-    <a>红豆：</a><br>
+    <a>红豆：</a></br>
     <audio src="./hongdou.mp3" autoplay loop controls></audio>
-
-    <script>
-        const audio = document.querySelector('audio');
-        const loading = document.getElementById('loading');
-
-        audio.addEventListener('loadeddata', () => {
-            loading.style.display = 'none';
-            audio.style.display = 'block';
-        });
-    </script>
 </body>
 </html>
-
